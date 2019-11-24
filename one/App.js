@@ -8,25 +8,34 @@ import {
   Alert,
 } from 'react-native';
 import Constants from 'expo-constants';
+import { TextInput } from 'react-native';
 
 function Separator() {
   return <View style={styles.separator} />;
 }
 
+
+
 export default function App() {
+  const [value, onChangeText] = React.useState('Enter Email ID');
+const [value2, onChangeText2] = React.useState('Enter the file name');
   return (
     <SafeAreaView style={styles.container}>
-      <View>
-        <Text style={styles.title}>
-          Enter Email ID
-        </Text>
 
-      </View>
+
+      <TextInput
+       style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
+       onChangeText={text => onChangeText(text)}
+       value={value}
+     />
+     <TextInput
+      style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
+      onChangeText={text => onChangeText2(text)}
+      value={value2}
+    />
       <Separator />
       <View>
-        <Text style={styles.title}>
 
-        </Text>
         <Button
           title="Upload File"
           color="#f194ff"
