@@ -26,6 +26,11 @@
     "ios": {
       "supportsTablet": true
     },
+    "android": {
+      "package": "com.abhijithneilabraham.pdfsummariser"
+    },
     "description": ""
+
   }
+
 }
